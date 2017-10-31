@@ -1,0 +1,36 @@
+/* this is my styles sheet */
+
+/* First Tag Styles */
+
+body {font-family: Arial, Helvetica, sans-serif;
+      background-color: antiquewhite;}
+      
+table, th, td {
+        border: 1px solid black;
+            }
+
+table {
+                width: 100%;
+            }
+            
+th {
+                height: 50px;
+            }
+
+h2 {
+    color: black;
+}           
+
+/* ID Styles use HASH */ 
+
+#almond {color: blanchedalmond;}
+#chartreus {color: chartreuse;}
+
+
+
+/* Class . symbol for a class */
+.dark {background-color: black;
+color: aliceblue;}
+
+.midtone{background-color: beige;
+color: darkmagenta;}

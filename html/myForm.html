@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example HTML5 Form</title>
+    <style>
+    textarea {font-family: Arial, Helvetica, sans-serif;}
+    div {background-color: teal; color: antiquewhite;}
+    input {background-color: palegoldenrod;}
+    </style>
+</head>
+<body>
+<div>
+
+    <form title="please complete this form">
+        <!-- we can say 'novalidate to turn off browser validation' -->
+        <input type="text" placeholder="name" required>
+        <br>
+        <input type="password" placeholder="password" required>
+        <br>
+        <input type="email" placeholder="email" required>
+        <br>
+        <input type="number" placeholder="age" required>
+        <br>
+        <input type="date" >
+        <br>
+        <input type="range" min='0', max='50'>
+        <br>
+        <input type="radio" value="tea" name="drink">Tea
+        <br>
+        <input type="radio" value="coffee" name="drink">Coffee
+        <br>
+        <input type="radio" value="water" name="drink">water
+        <br>
+        <hr>
+        <input type="checkbox" value="yes" name="Car">Car
+        <input type="checkbox" value="yes" name="Bike">Bike
+        <input type="checkbox" value="yes" name="Walk">Walk
+        <hr>
+        <select multiple>
+            <option value ="0">Animals</option>
+            <option value ="1">People</option>
+            <option value ="2">City</option>
+            <option value ="3">Abstract</option>
+
+        
+        </select>
+        <br>
+        <textarea></textarea>
+
+        <br>
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+
+</div>
+</body>
+</html>
