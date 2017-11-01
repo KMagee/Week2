@@ -3,7 +3,7 @@
 /* First Tag Styles */
 
 body {font-family: "Roboto", sans-serif;
-      background-color:white;}
+      background-color:#221E1D;}
       
 table, th, td {
     font-family:  "Roboto", sans-serif;   
@@ -13,22 +13,43 @@ table, th, td {
 
 table {
                 width: 100%;
+                border: 0cm;
             }
             
 th {
                 height: 50px;
+                border: 2px inset #757575;
             }
 
+td {
+    border: 0cm;
+
+}
+
 h2, h3, h4 {
-    color: #757575;
+    color: #E9633B;
 }           
+
+hr {
+    height: 1px;
+    color: #E9633B;
+    background: #E9633B;
+    font-size: 0;
+    border: 0;
+}
+
+
 
 section {
     margin: 0 1.5%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    border: 1px solid #757575
+    margin-left: 75px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border: 5px outset #757575;
+    background-color: #ECEAE0;
+    font-size: 11pt;
     
 }
 
