@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id ="content">
+
+    <a id="myLink" href="https://google.ie?q=galway">Search</a>
+</div>
+
+    <script>
+        
+        //three ways to do variables
+        var x = 1; //this is the old way
+        let y = true; // this is ES6+
+        const Z = 'immutable' //also ES6+
+        
+        //three kinds of variable
+        let s = 3.141 // this is a scalal - 1 value
+        let a = []  //this is an array
+        let o = {} // this is an object
+
+        //loops
+        for(let i=0;i<10;i++){
+            if(i%2 == 0){
+                console.log(`the number ${i} is even`) //expression syntax / back ticks
+            } else { 
+                console.log(`the number ${i} is odd`)
+            }
+        }
+
+        //manipulating the DOM
+        let newContent = document.createElement('img')
+        newContent.setAttribute('src', 'images/a_pair.jpg')
+        newContent.setAttribute('alt', 'small birds')
+        content.appendChild(newContent)
+
+        //prevent the default behaviour of a hyperlink
+        doStuff = () => {
+
+            console.log(EventTarget)
+            event.preventDefault()
+
+        }
+
+        myLink.addEventListener('click', doStuff)
+
+
+
+
+        </script>
+    
+</body>
+</html>
