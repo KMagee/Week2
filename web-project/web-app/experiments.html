@@ -51,6 +51,50 @@
         myLink.addEventListener('click', doStuff)
 
 
+        //objects
+
+        let o3 = {} //this is ECMAScript 3
+            o3.prop = 'es3'
+        
+        let o5 = Object.create(null) // this is ECMAScript 5
+        o5.otherProp = 'es5'
+
+        let m5 = Object.create(o5)
+        m5.flag=true
+        
+        class myObj { //this is  ECMAScript 6
+            //myProp = 'es6'
+
+        }
+
+        console.log(o3,o5,m5)
+
+
+        //function demo
+        function demo(){
+           //this is 'variable hoisting'
+           var p =1 
+           console.log(p)
+            
+        }
+
+
+        demo2 = () =>{
+            let s = 1
+            console.log(s)
+        }
+
+       // demo()
+        //demo2()
+
+        //Immediately Invoked function Expressions
+        //write function then call it, IIFE immediately returns the function so you dont have to call it
+        //wrap the function in () and invoke it
+
+        (function(){
+            console.log("inside an IIFE")
+        })()
+
 
 
         </script>

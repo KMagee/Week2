@@ -1,0 +1,45 @@
+Web Technologies Review Exercise 2     
+==================================    
+Build a single-page-app to get the current weather for a given city/country.
+
+Create a new HTML file called 'weather.html' (alongside my-app.html)
+
+Make use of the loadingData example (either xhr or fetch) but using this URL:
+http://api.openweathermap.org/data/2.5/weather?
+
+q=galway,ie&APPID=48f2d5e18b0d2bc50519b58cce6409f1
+
+Initially just get the JSON and show it using console.log() or inside a <pre> tag
+
+
+
+
+
+Then give the user two form fields, one for the city and the other for the country. 
+
+Also provide a button. Add an event listener to the button.
+
+
+Inside the event listener, read what the user entered for city and country
+
+
+Then make a call to the weather service url, replacing 'galway,ie' with the new values 
+
+(use back-ticks and ${} systax)
+
+Finally, show the weather description on the page
+    e.g.
+	let desc=data.weather[0].description
+
+
+
+	output.innerHTML = desc
+
+Optional
+========
+Show the temperature and wind speed on the page
+Convert the temperature to Celcius (-273) and use the degrees symbol &deg;
+Give the user a drop-down to choose the country instead of typing it
+
+
+let userSelection =

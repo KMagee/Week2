@@ -36,6 +36,6 @@ handleForm = ()=>{
 
     let fullName = `${fname.value} ${lname.value}`
     username.innerHTML = fullName
-}
+                }
 
 btnGo.addEventListener('click', handleForm)
