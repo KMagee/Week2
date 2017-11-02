@@ -3,8 +3,12 @@
 let xhr = new XMLHttpRequest()
 
 xhr.open('get', `http://api.openweathermap.org/data/2.5/weather?q=galway,ie&APPID=48f2d5e18b0d2bc50519b58cce6409f1`)
+xhr.send()
 
 handleForm = ()=>{
+    console.log(frmcity.value)
+    console.log(frmcountry.value)
+
     event.preventDefault()
     
 
@@ -17,7 +21,7 @@ handleForm = ()=>{
         let desc=data.weather[0].description
         let windspeed =  data.wind.speed
         output.innerHTML =  windspeed + " " + desc 
-    }xhr.send()
+    }
     
 }
 
