@@ -4,7 +4,7 @@ handleForm = ()=>{
     let country=frmcountry.value
 
     let xhr = new XMLHttpRequest()
-    xhr.onload = function()
+    xhr.onreadystatechange = function()
     {
         if (this.readyState === 4 && this.status === 200) 
         {
