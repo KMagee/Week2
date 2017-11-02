@@ -4,6 +4,8 @@ handleForm = ()=>{
     let country=frmcountry.value
 
     let xhr = new XMLHttpRequest()
+    xhr.open('get', `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=48f2d5e18b0d2bc50519b58cce6409f1`)
+
     xhr.onreadystatechange = function()
     {
         if (this.readyState === 4 && this.status === 200) 
@@ -30,8 +32,7 @@ handleForm = ()=>{
             weatherOutput.appendChild(wind)
          }  
     }
-     xhr.open('get', `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=48f2d5e18b0d2bc50519b58cce6409f1`)
-     xhr.send()
+ xhr.send()
 }
 
 btnGo.addEventListener('click', handleForm)
