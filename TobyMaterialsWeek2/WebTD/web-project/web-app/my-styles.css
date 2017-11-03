@@ -1,0 +1,19 @@
+/* this is my-styles.css */
+/* first, TAG styles */
+body {font-family: Arial, Helvetica, sans-serif;}
+nav  {background-color: antiquewhite;
+      width:280px;
+}
+/* all measurements MUST include units, e.g. px, % etc */
+h2 {color:hotpink;}
+
+/* class styles (use DOT character) */
+.dark {background-color: black;
+       color:aliceblue;}
+
+.mid-tone {background-color:beige;
+    color:darkmagenta;}
+
+/* ID styles (use HASH character) */
+#almond {color:blanchedalmond;}
+#chartreus {color:#33FF99;}

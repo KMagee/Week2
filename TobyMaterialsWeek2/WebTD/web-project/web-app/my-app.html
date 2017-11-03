@@ -1,0 +1,42 @@
+<!-- this is my-app.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Single Page Web Application</title>
+    <link rel="stylesheet" href="styles/styles.css"/>
+    
+</head>
+<body>
+    <div id="content">
+        <header>
+            <img src="images/header.jpg" alt="page header"/>
+        </header>
+        <article id="intro">
+            <h3>Welcome to my automated web app</h3>
+            <p>This demonstrates modern single-page architecture</p>
+
+            <button id="btnAgree" >I agree to cookies</button>
+
+        </article>
+        <article id="main">
+            <form id="myForm">
+                <input type='text' 
+                       placeholder='enter first name'
+                       id='fname' /><br/>
+                <input type='text' 
+                       placeholder='enter last name'
+                       id='lname' /><br/>
+                <button id='btnGo'>Go</button>
+            </form>
+            <p id='username'></p>
+        </article>
+        <footer>
+            <pre>&copy; 2017 read our legal notice</pre>
+        </footer>
+    </div>
+</body>
+<script src="scripts/scripts.js"></script>
+</html>

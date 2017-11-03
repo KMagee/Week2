@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Routing</title>
+    <style>
+        li {list-style: none;
+            float:left;
+            width: 60px;
+            background-color:aqua;
+            color:darkblue;
+            border: 1px solid red;}
+        article {clear: both}
+        .toggleVisible {display:block;}
+        .toggleHidden {display:none;}
+    </style>
+</head>
+<body>
+    <article>
+        <nav>
+            <ul>
+                <li><a href='#'>link 1</a></li>
+                <li><a href='#'>link 2</a></li>
+                <li><a href='#'>link 3</a></li>
+                <li><a href='#'>link 4</a></li>
+            </ul>
+        </nav>
+    </article>
+    <article>
+        <h3>Main content goes here</h3>
+        <div>
+                <a id='myLink' href='https://google.co.uk'>Link</a> |
+                <a id='nullLink' href='#'>Toggle</a>
+            </div>
+            <div id='content' class='toggleVisible'>
+                <h3>This content is shown or hidden</h3>
+            </div>
+    </article>
+<script>
+    redirectLink=()=>{
+        event.preventDefault()
+        window.location.href = 'https://duckduckgo.com'
+    }
+
+    toggleContent=()=>{
+        event.preventDefault()
+        let viewstate = content.getAttribute('class')
+        if(viewstate == 'toggleVisible'){
+            content.setAttribute('class', 'toggleHidden')
+        } else {
+            content.setAttribute('class', 'toggleVisible')
+        }
+    }
+
+    myLink.addEventListener('click', redirectLink)
+    nullLink.addEventListener('click', toggleContent)
+</script>
+</body>
+</html>

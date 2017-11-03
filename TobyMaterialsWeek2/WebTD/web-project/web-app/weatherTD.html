@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getting the Weather</title>
+</head>
+<body>
+    <article id='main'>
+        <section>
+            <form id='weatherForm'>
+                <input type="text"
+                       id='frmCity' 
+                       value='Galway'
+                       placeholder='enter city'/><br>
+                <input type="text" 
+                       id='frmCountry' 
+                       value='ie'
+                       placeholder='enter country'/><br>
+                <button id='btnGetWeather'>Get Weather</button>
+            </form>
+        </section>
+        <section id='weatherOutput'>
+        </section>
+    </article>
+</body>
+<script src='scripts/weatherService.js'></script>
+</html>

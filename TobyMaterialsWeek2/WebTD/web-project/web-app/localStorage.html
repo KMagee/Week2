@@ -1,0 +1,37 @@
+<!-- this is localStorage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Using Local Storage</title>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+<script>
+    // put something into localStorage
+   // localStorage.setItem('name', 'Deidre')
+    //read something from locaStorage
+    let retrieved = localStorage.getItem('name')
+    content.innerHTML = retrieved
+
+// exploring function parameters
+function calculate(x, y=10, ...rest){
+    if(arguments.length == 1)
+    console.log(x*y)
+    if(arguments.length == 2)
+    console.log(x*y)
+}
+
+calculate(2)    // returns 2*2 i.e. 4
+calculate(2, 3) // returns 2*3 i.e. 6
+
+
+
+
+
+
+</script>
+</html>

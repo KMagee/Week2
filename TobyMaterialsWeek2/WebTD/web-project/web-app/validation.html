@@ -1,0 +1,129 @@
+<!-- this is validation.html -->
+<!-- https://pastebin.com/LH5CDhkH -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Form Validation</title>
+    <style>
+        .showError {display:inline;}
+        .hideError {display:none;}
+        .green {color:green; background-color:beige;}
+        .amber {color:orange; background-color:rgb(247, 247, 185);}
+        .red {color:red; background-color:rgb(12, 12, 9);}
+
+    </style>
+</head>
+<body>
+    <article id='content'>
+        <form id='frmDemo'>
+            <input id='frmScore' placeholder="enter your score"/>
+            <span class='hideError' id='msgScoreError'>Score must be 0-100</span>
+            <br/>
+            <input id='frmUsername' placeholder="enter your username"/>
+            <span class='hideError' id='msgUsernameError'>Username must be 3-12 characters</span>
+            <br/>
+            <input id='frmAge' placeholder="enter your age (18+)"/>
+            <span class='hideError' id='msgAgeError'>Age must be 18 or more</span>
+            <br/>
+            <select id='frmLevel'>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+            <button id='btnGo'>Go</button>
+        </form>
+        <h3 id='gamePlay'>Game Play</h3>
+    </article>
+    <article id='showData'>
+        <h4 id='showScore'></h4>
+        <h4 id='showUsername'></h4>
+        <h4 id='showAge'></h4>
+    </article>
+</body>
+<script>
+    //declare some flags
+    let scoreFlag = false
+    let usernameFlag = false
+    let ageFlag = false
+
+    // event listener call-back functions
+    handleData = ()=>{
+        event.preventDefault() // prevent the form from submitting
+        // run all the validation checks again...
+        validateScore()
+        validateUsername()
+        validateAge()
+        console.log(scoreFlag, usernameFlag, ageFlag)
+        if (scoreFlag == true && usernameFlag == true && ageFlag == true ){
+            console.log('all valid')
+            // show all the data
+            showScore.innerHTML = `Score: ${frmScore.value}`
+            showUsername.innerHTML = `Username: ${frmUsername.value}`
+            showAge.innerHTML = `Age: ${frmAge.value}`
+        }
+    }
+
+    validateScore = ()=>{
+        // score must be a whole number between 0 and 100
+        let score = frmScore.value
+        if( score == '' || score != Math.round(score) || score < 0 || score > 100 ){
+            // show the error message
+            msgScoreError.setAttribute('class', 'showError')
+            scoreFlag = false
+        } else {
+            // hide the error message
+            msgScoreError.setAttribute('class', 'hideError')
+            scoreFlag = true
+        }
+    }
+
+    validateUsername = ()=>{
+        // username must be a between 3 and 12 characters
+        if( frmUsername.value.length < 3 || frmUsername.value.length > 12 ){
+            // show the error message
+            msgUsernameError.setAttribute('class', 'showError')
+            ussernameFlag = false
+        } else {
+            // hide the error message
+            msgUsernameError.setAttribute('class', 'hideError')
+            usernameFlag = true
+        }
+    }
+
+    validateAge = ()=>{
+        let age = frmAge.value
+        if( age < 18 || age != Math.round(age) ){
+            // show the error message
+            msgAgeError.setAttribute('class', 'showError')
+            ageFlag = false
+        } else {
+            // hide the error message
+            msgAgeError.setAttribute('class', 'hideError')
+            ageFlag = true
+        }
+    }
+
+    setLevelColor = ()=>{
+        let level = frmLevel.value
+        if(level == 'Low'){
+            gamePlay.setAttribute('class', 'green')
+        } else if (level == 'Medium'){
+            gamePlay.setAttribute('class', 'amber')
+        } else {
+            gamePlay.setAttribute('class', 'red')
+        }
+    }
+
+    // add listeners to the form fields
+    frmDemo.addEventListener('submit', handleData)
+    frmScore.addEventListener('blur', validateScore)
+    frmUsername.addEventListener('blur', validateUsername)
+    frmAge.addEventListener('blur', validateAge)
+    frmLevel.addEventListener('change', setLevelColor)
+
+
+</script>
+</html>

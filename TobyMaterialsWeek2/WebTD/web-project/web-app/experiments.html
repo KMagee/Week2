@@ -1,0 +1,85 @@
+<!-- this is experiments.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exploring modern JavaScript</title>
+</head>
+<body>
+    <div id="content">
+        <a id="myLink" href="https://google.ie?q=galway">Search</a>
+    </div>
+</body>
+<script>
+    // three ways to do variables
+    var x = 1 // this is the old way
+    let y = true // this is ES6+
+    const Z = 'immutable' // this is also ES6+
+
+    // three kinds of variable
+    let s = 3.141 // this is a scalar
+    let a = []    // this is an array
+    let o = {}    // this is an object
+
+    // loops
+    for (let i=0; i<10; i++){
+        if(i%2 == 0){ // modulo arithmetic
+            console.log(`the number ${i} is even`) // expression syntax aka back-ticks
+        } else {
+            console.log(`odd`)
+        }
+    }
+
+// manipulating the DOM
+    let newContent = document.createElement('img')
+        newContent.setAttribute('src', 'images/a_pair.jpg')
+        newContent.setAttribute('alt', 'small birds')
+    content.appendChild(newContent)
+// prevent the default behaviour of a hyperlink
+    doStuff = ()=>{
+        event.preventDefault()
+    }
+    myLink.addEventListener('click', doStuff)
+
+
+// Objects
+
+let o3 = {} // this is ECMASCript 3 same as new Object()
+    o3.prop = 'es3'
+
+let o5 = Object.create(null) // this is ECMAScript 5
+    o5.otherProp = 'es5'
+let m5 = Object.create(o5)
+    m5.flag = true
+
+class MyObj{ // this is ECMAScript 6
+    // myProp = 'es6'
+}
+
+console.log(o3, o5, m5)
+
+// functions
+
+function demo(){
+    // this is 'variable hoisting'
+    // treat variables as if they existed
+    var x=2
+    console.log(x)
+
+}
+
+//demo()
+
+// Immediately Invoked function Expressions (IIFE)
+
+(function(){
+    console.log('inside an IIFE')
+})()
+
+
+
+
+</script>
+</html>

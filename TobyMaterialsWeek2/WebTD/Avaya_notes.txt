@@ -1,0 +1,192 @@
+This week - in this room doing Java
+Next week - in this room doing Web tech
+week after - first 3 days NOT in this training room
+
+Before Christmas: Thursday is last day, start back after bank holiday in January
+
+There will be project work... some un-supervised time
+
+Sign-in each day
+Questions:
+- does Avaya have online learning resources?
+> BYOD
+> the room: lights, air con etc.
+> sort out javac -version (not working on several PCs)
+
+Monday
+------
+Intro to Computers, back-end/front-end and Java
+- extra exercises
+after lunch:
+> install IDE (and Java 7/8/9?)
+- online documentation
+> create a project
+> write Java
+> run
+
+Tuesday
+-------
+> Sign-in each day
+> online documentation e.g. https://docs.oracle.com/javase/7/docs/api/java/util/Random.html
+> a project for those with strong Java experience
+> Which version of JDK.... 8/9?
+> Which IDE
+> Java: getting input using Scanner
+> auto complete in IDEs
+> testing
+> rules for identifiers: letters, numbers, underscore, cannot start with a digit
+> prefix and postfix operators 
+> compiled vs interpreted
+> logic: if, for etc,
+> arrays
+> passing arguments in to a function (e.g. the main function of a class)
+> name-space and packages
+> load up the USB assets
+> Encapsulation, Abstraction and Inheritance
+
+Wednesday ( optional: see additional exercise 2 https://pastebin.com/jyavmzmv )
+---------
+> Sign in
+> auxilliary project
+  > see mock data factory
+> Thinking about your own project (which you present on 24th Nov)
+> Objects, properties and methods (also scope)
+> where is our bank-account instance?
+> review exercise
+> debugging
+> file access (write to a text file)
+> revisit slides to 56
+
+Thursday
+--------
+> when can you set a class as 'public'
+> the 'this' keyword
+> connecting to databases: using ij and using derby
+  see https://pastebin.com/iBC7YVG9
+> a bit of SQL
+> connect to Derby from Java
+> after lunch review exercise
+  sending several statements...
+  UPDATE existing data
+> see the sample derby classes...
+  'homework...'
+- Your user-login details
+
+Friday
+------
+> Install Java JDK 9
+  http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html
+- see https://docs.oracle.com/en/java/
+- how about a practice presentation?
+> class inheritance and interfaces
+> constructor chaining and overloading the constructor
+- @Override decorator
+> cool things in Java:
+  type casting
+  clearer large integers
+  byte wrapping
+  Arrays and ArrayLists
+> getClass and instanceof
+> Review Exercise
+> Hashmap
+> Just which class is the main class (not necessarily 'Main' ) ?
+  Threads
+- begin looking at the front end (web technologies)
+- install Visual Studio Code and Node
+- end of course evaluation
+- make my assets and presentation available - see http://tinyurl.com/y6u4qkdc
+
+==================================================================================
+
+Questions:
+- why is the img tag not showing?
+
+This week: (Tues-Fri) HTML/CSS/JavaScript
+Tuesday
+> sign in each day
+> propose to do mini-presentation on Wednesday afternoon (5 mins each)
+- modal: https://stackoverflow.com/questions/26246821/find-modal-number-in-array
+> HTML5, css and basic JavaScript
+> separating content from presentation
+> elements and attributes, self-close tags, using quotes
+> headings, paragraphs, lists
+> images, line breaks and horizontal rule
+> tables div and span
+> block and inline elements, semantic tags
+  forms: input, select, textarea, buttons
+> after lunch review exercise
+> tags: two ways to self-close
+> title: can apply to ANY element
+> forms: select, radio, checkbox and buttons
+> forms: method, action
+
+Wednesday
+> sign in each day
+> web, web sites and web apps (single page apps)
+> web project architecture
+> Using NodeJS and package.json see https://pastebin.com/AqFS3zzc
+  we need to install git for windows
+> JavaScript:
+> where to put script code
+> the page load event
+> handling common events such as button clicks
+> using the console to debug
+  using selectors to access DOM elements
+  manipulating the DOM
+  variables and functions
+  scalar, array and object 
+  Model-View-Controller (MVC)
+  expression back-ticks
+  loops and conditionals
+  preventing hyperlinks and forms default behaviour
+  Getting user input and validating forms
+> ECMASCript 3, 5, 6 etc.
+> transpilers
+> Chrome dev tools overview
+> after lunch five minute presentation from each person
+
+Thursday
+> sign in each day - also end of course evals ????
+> USB examples
+> transpilers
+> examples of the sort of project
+> does the same JavaScript work across all browsers?
+> revisit the event.preventDefault for hyperlinks...
+> iterate to generate content
+> what is npm???
+> what is live-server???
+  try this:
+  open a command window in the folder containing package.json
+  npm config set strict-ssl false
+  npm install -g live-server
+> AJAX: JSON/XML, XmlHttpRequest, Fetch and promises
+> sending and receiving data over http. Also parameters
+> IIFE
+> functional programming
+> after lunch review exercise
+
+Friday
+> sign in each day
+> reliably starting and stopping the automated live-server
+> JavaScript and semi-colons
+> test-driven development
+> some useful JavaScript utilities
+> name-spacing
+> form validation and user experience
+- routing
+> after lunch review exercise
+> decide what project to do
+- CSS menus
+- End of course evaluation
+
+===================================================================
+
+week of Nov 20-24
+- design
+- other modern web technologies
+- Friday 24th Presenting your project
+- a bit about Angular, React etc.
+- @ decorators in TypeScript
+- JIT AOT
+- web fonts
+- CSS for different media...

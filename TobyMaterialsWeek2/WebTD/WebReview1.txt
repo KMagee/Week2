@@ -1,0 +1,27 @@
+Web Technologies: review exercise 1  see https://pastebin.com/6C7Lb6gZ
+===================================  until 2:10 or maybe 2:25
+Create a new html5 page (or continue with about-me.html)
+Structure all the content into articles and sections
+Write a couple of paragraphs about your hobbies/interests
+In a table, show your qualifications and/or experience
+Write an un-ordered list of your favourite sports/books/films/countries/anything
+Within a 'nav' tag, create hyperlinks to three websites that you like
+
+  e.g.   <a href='https://duckduckgo.com'>duck search</a>
+
+This time, show the links on separate lines (instead of next to each other)
+
+Use a definition list to (loosely) define what is meant by 'ul' and 'ol' in html
+Add one or more images of things you like (e.g. jokes/characters/places/food/anything)
+
+Add a few 'hr' tags to visually break the page flow
+
+Optional
+--------
+Add a form asking the user to fill in:
+- favourite website (as a url)
+- date of birth (as a date)
+- shoe-size (as a range)
+- favourite colour (as a color)
+
+
