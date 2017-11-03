@@ -1,0 +1,136 @@
+<!-- This is  validation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Form Validation</title>
+    <style>
+    .showError{
+        display:inline;
+    }
+    .hideError{
+        display:none;
+    }
+    #header1{
+        background-color: cadetblue;
+        color: whitesmoke;
+    }
+
+
+    </style>
+</head>
+<body>
+    
+    <article id='content'>
+
+        <form id='frmDemo'>
+
+            <input id='frmScore' placeholder="enter your score" /> <span class='hideError' id='msgScoreError'>Score must be a whole number between 0-100</span><br/>
+            <input id='frmUsername' placeholder="enter your username"/><span class='hideError' id='msgUsernameError'>Username must be between 3 and 12 characters</span><br/>
+
+            <input id='frmAge' placeholder="enter your age"/><span class='hideError' id='msgAge'>Age must be a whole number over 18</span> <br/>
+
+                    
+
+            <select id='levels'>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option> 
+             </select>                 
+   
+<br/>
+            <button id='btnGo'>Go</button>
+
+        </form>
+        
+        <h2 id='header1'>Game Play</h2>  
+
+           <script>
+               //event listener call back functions
+               handleData = () =>{
+                event.preventDefault() //prevent the form from submitting, do something else...
+
+                validateAge()
+                validateUsername()
+                validateScore()
+
+               }
+
+               validateScore = () =>{
+                //validate score must be between 0 and 100, must be a whole number...
+                if (frmScore = '' || frmScore.value < 0 || frmScore.value > 100 || frmScore.value % 1 != 0)
+                {
+                    
+                    msgScoreError.setAttribute('class', 'showError')
+
+                    //alert('score must be between 0 and 100')
+
+                } else{ msgScoreError.setAttribute('class', 'hideError')}
+
+            }
+
+               validateUsername = () =>{
+                   //username must be between 3 and 12 chars
+                if (frmUsername.value.length < 3 || frmUsername.value.length > 12){
+
+                    msgUsernameError.setAttribute('class', 'showError')
+
+                    //alert('score must be between 0 and 100')
+
+                } else{ msgUsernameError.setAttribute('class', 'hideError')
+                    
+            }
+
+               }
+
+
+               validateAge = () =>{
+                //age must be over  18
+                if(frmAge.value = '' || frmAge.value < 18 || frmAge.value % 1 != 0){
+                       msgAge.setAttribute('class', 'showError') 
+
+                } else{
+                    msgAge.setAttribute('class', 'hideError')
+                }
+
+
+               }
+
+
+               validateSkill = () => {
+                    if (levels.value == 'low')
+                    {
+                        header1.setAttribute("style", "background-color: green;")
+                    } 
+                    else if (levels.value == 'medium'){
+                        header1.setAttribute("style", "background-color: orange;")
+                    } 
+                    else if (levels.value == 'high')
+                        header1.setAttribute("style", "background-color: red;")       
+               }
+
+
+
+           
+           //add listeners to the form fields
+            frmDemo.addEventListener('submit', handleData)
+            frmScore.addEventListener('blur', validateScore)
+            frmUsername.addEventListener('blur', validateUsername)
+            frmAge.addEventListener('blur', validateAge)
+            levels.addEventListener('change', validateSkill)
+            
+           
+           </script> 
+
+
+
+    
+
+    </article>
+
+
+
+</body>
+</html>

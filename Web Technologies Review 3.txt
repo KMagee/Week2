@@ -1,0 +1,35 @@
+Web Technologies Review 3
+=========================
+Continue with 'validation.html' and add a text input field 
+for player age
+Write a <span> with an error message and initially
+ hide it using class='hideError'
+Add a 'blur' event listener to your new form field
+Show the error if the age value is less than 18
+Remember to hide the error again when the field is valid
+
+Optional
+--------
+Modify the score and age validation tests to also check the value 
+is a whole number (Math.round)
+
+
+Write <h2>Game Play</h2> and apply css colour to 
+the background and text of this tag
+Write a <select> tag and <option> tags 
+for game level (e.g. 'low' 'medium' 'high') --drop down
+Add a 'change' event listener which applies 
+css to the h2 depending on the skill level
+  e.g. choosing a level would show green amber or red colour
+listener change, setAttribute to change color
+
+When the user submits the form run all the validation checks again 
+and show/hide 
+
+messages depending on the validation results. 
+If everything is ok show a message 
+
+thanking the user for their data
+
+Find a way to show everythnig 
+the user entered ONLY if all the validation is ok
